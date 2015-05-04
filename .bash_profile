@@ -23,3 +23,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # For homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+# For Fits
+export PATH=$PATH:/Users/hortongn/Google_Drive/Development/fits
+

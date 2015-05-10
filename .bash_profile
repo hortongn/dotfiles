@@ -27,3 +27,5 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # For Fits
 export PATH=$PATH:/Users/hortongn/Google_Drive/Development/fits
 
+# For sufia openoffice test
+export PATH=$PATH:/Applications/LibreOffice.app/Contents/MacOS

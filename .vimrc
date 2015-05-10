@@ -20,7 +20,7 @@ set ignorecase      " Ignore case in search patterns.
 set smartcase       " Override the 'ignorecase' option if the search pattern contains upper case characters.
 set ruler           " show column count in status bar
 set autoindent	    " automatically indent code
-set colorcolumn=80  " change the color of column 80 to show long line of code
+set colorcolumn=100  " change the color of column 80 to show long line of code
 
 set wrap
 set linebreak
@@ -33,3 +33,6 @@ autocmd BufWritePre *.rb :%s/\s\+$//e   " remove trailing whitespace from .rb fi
 
 execute pathogen#infect() 
 autocmd vimenter * NERDTree
+
+:map <f7> :tabp<cr>
+:map <f8> :tabn<cr>

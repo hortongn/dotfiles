@@ -20,7 +20,9 @@ set ignorecase      " Ignore case in search patterns.
 set smartcase       " Override the 'ignorecase' option if the search pattern contains upper case characters.
 set ruler           " show column count in status bar
 set autoindent	    " automatically indent code
-set colorcolumn=100  " change the color of column 80 to show long line of code
+set colorcolumn=105  " change the color of column 80 to show long line of code
+
+set guifont=Consolas:h16
 
 set wrap
 set linebreak

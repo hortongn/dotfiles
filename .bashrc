@@ -1,3 +1,5 @@
+# Git auto-completion
+source ~/.git-completion.bash
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 

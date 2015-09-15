@@ -9,18 +9,18 @@ set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
 set shiftwidth=2    " Number of spaces to use for each step of (auto)indent.
 set expandtab       " tabs are spaces
-set number              " show line numbers
-set showcmd             " show command in bottom bar
-set cursorline          " highlight current line
-set showcmd             " show command in bottom bar
-set showmatch           " highlight matching [{()}]
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
+set number          " show line numbers
+set showcmd         " show command in bottom bar
+set cursorline      " highlight current line
+set showcmd         " show command in bottom bar
+set showmatch       " highlight matching [{()}]
+set incsearch       " search as characters are entered
+set hlsearch        " highlight matches
 set ignorecase      " Ignore case in search patterns.
 set smartcase       " Override the 'ignorecase' option if the search pattern contains upper case characters.
 set ruler           " show column count in status bar
 set autoindent	    " automatically indent code
-set colorcolumn=105  " change the color of column 80 to show long line of code
+set colorcolumn=125 " change the color of column 125 to show long lines of code
 
 set guifont=Consolas:h16
 

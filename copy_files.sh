@@ -9,4 +9,5 @@ cp ~/.vimrc .vimrc
 cp ~/.git-completion.bash .git-completion.bash
 rm -rf .vim
 cp -rp ~/.vim .vim
-
+rm -rf bin
+cp -rp ~/bin bin

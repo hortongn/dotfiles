@@ -29,3 +29,6 @@ export PATH=$PATH:/Users/hortongn/Development/fits
 
 # For sufia openoffice test
 export PATH=$PATH:/Applications/LibreOffice.app/Contents/MacOS
+
+# Add my bins directory to path
+export PATH=$PATH:/Users/hortongn/Google_Drive/bin

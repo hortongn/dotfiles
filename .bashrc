@@ -1,6 +1,4 @@
-# Git auto-completion
-source ~/.git-completion.bash
+if [ -f ~/.bash_profile ]; then
+  source ~/.bash_profile
+fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"

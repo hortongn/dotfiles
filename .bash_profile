@@ -30,5 +30,5 @@ source ~/.git-completion.bash
 # Start redis server
 sudo /bin/systemctl start redis.service
 
-/usr/bin/tmux
+/usr/local/bin/tmux
 

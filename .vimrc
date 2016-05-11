@@ -43,3 +43,5 @@ execute pathogen#infect()
 
 :map <f7> :tabp<cr>
 :map <f8> :tabn<cr>
+:map <space> :
+

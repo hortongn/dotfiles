@@ -33,3 +33,8 @@ source ~/.git-completion.bash
 # For homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+if [[ ! $TERM =~ screen ]]; then
+  if [ -f /home/vagrant/.bash_profile ]; then
+    exec /usr/local/bin/tmux
+  fi
+fi

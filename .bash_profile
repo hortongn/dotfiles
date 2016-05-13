@@ -1,13 +1,16 @@
 function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
- 
+
+NO_COLOR="\[\033[0m\]"
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
-GREEN="\[\033[0;32m\]"
-NO_COLOR="\[\033[0m\]"
+HOST_COLOR="\[\033[0;32m\]"
+if [ -f /home/vagrant/.bash_profile ]; then
+  HOST_COLOR="\[\033[0;34m\]"
+fi
  
-PS1="$GREEN\u@\h$NO_COLOR:\W$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+PS1="$HOST_COLOR\u@\h$NO_COLOR:\W$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 
 # Load the default .profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
@@ -29,6 +32,4 @@ source ~/.git-completion.bash
 
 # For homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-/usr/local/bin/tmux
 

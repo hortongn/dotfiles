@@ -2,15 +2,14 @@ function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-NO_COLOR="\[\033[0m\]"
-RED="\[\033[0;31m\]"
-YELLOW="\[\033[0;33m\]"
-HOST_COLOR="\[\033[0;32m\]"
+NO_COLOR="\[$(tput sgr0)\]\[\033[38;5;15m\]"
+YELLOW="\[$(tput sgr0)\]\[\033[38;5;11m\]"
+HOST_COLOR="\[\033[38;5;2m\]"
 if [ -f /home/vagrant/.bash_profile ]; then
-  HOST_COLOR="\[\033[0;34m\]"
+  HOST_COLOR="\[\033[38;5;4m\]"
 fi
- 
-PS1="$HOST_COLOR\u@\h$NO_COLOR:\W$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+
+export PS1="$HOST_COLOR\u@\h$NO_COLOR:\W$YELLOW\$(parse_git_branch)$NO_COLOR\\$\[$(tput sgr0)\] "
 
 # Load the default .profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"

@@ -45,3 +45,4 @@ execute pathogen#infect()
 :map <f8> :tabn<cr>
 :map <space> :
 
+let g:NERDTreeWinSize=54

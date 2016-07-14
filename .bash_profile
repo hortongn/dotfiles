@@ -32,6 +32,9 @@ source ~/.git-completion.bash
 # For homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+# Set default editor
+export EDITOR='vim'
+
 if [[ ! $TERM =~ screen ]]; then
   if [ -f /home/vagrant/.bash_profile ]; then
     /usr/local/bin/tmux

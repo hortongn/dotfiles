@@ -6,3 +6,5 @@
 	excludesfile = /Users/hortongn/.gitignore_global
 [push]
 	default = matching
+[commit]
+	gpgsign = true

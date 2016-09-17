@@ -1,5 +1,5 @@
 function parse_git_branch () {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\n\1/'
 }
 
 NO_COLOR="\[$(tput sgr0)\]\[\033[38;5;15m\]"
@@ -9,7 +9,8 @@ if [ -f /home/vagrant/.bash_profile ]; then
   HOST_COLOR="\[\033[38;5;4m\]"
 fi
 
-export PS1="$HOST_COLOR\u@\h$NO_COLOR:\W$YELLOW\$(parse_git_branch)$NO_COLOR\\$\[$(tput sgr0)\] "
+#export PS1="$HOST_COLOR\u@\h$NO_COLOR:\W$YELLOW\$(parse_git_branch)$NO_COLOR\\$\[$(tput sgr0)\] "
+export PS1="$YELLOW\$(parse_git_branch)\n$HOST_COLOR\u@\h$NO_COLOR:\W$NO_COLOR\\$\[$(tput sgr0)\] "
 
 # Load the default .profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
@@ -21,7 +22,7 @@ export PS1="$HOST_COLOR\u@\h$NO_COLOR:\W$YELLOW\$(parse_git_branch)$NO_COLOR\\$\
 export PATH=$PATH:$HOME/.rvm/bin
 
 # For Fits
-export PATH=$PATH:~/Development/fits
+export PATH=$PATH:~/Development/fits/fits
 
 # Add my bin directory to path
 export PATH=$PATH:/Users/hortongn/Google_Drive/bin
@@ -35,8 +36,12 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # Set default editor
 export EDITOR='vim'
 
+# Fix GPG password prompt
+export GPG_TTY=$(tty)
+
 if [[ ! $TERM =~ screen ]]; then
   if [ -f /home/vagrant/.bash_profile ]; then
+    cd ~/Development
     /usr/local/bin/tmux
   fi
 fi

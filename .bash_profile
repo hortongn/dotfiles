@@ -1,5 +1,5 @@
 function parse_git_branch () {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\n\1/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
 NO_COLOR="\[$(tput sgr0)\]\[\033[38;5;15m\]"
@@ -25,7 +25,7 @@ export PATH=$PATH:$HOME/.rvm/bin
 export PATH=$PATH:~/Development/fits/fits
 
 # Add my bin directory to path
-export PATH=$PATH:/Users/hortongn/Google_Drive/bin
+export PATH=$PATH:/Users/hortongn/Google_Drive/Apps/bin
 
 # Git auto-completion
 source ~/.git-completion.bash

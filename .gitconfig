@@ -3,7 +3,7 @@
 	email = hortongn@ucmail.uc.edu
 	signingkey = 06EA7A27DCD58DC0
 [core]
-	excludesfile = /Users/hortongn/.gitignore_global
+	excludesfile = /home/vagrant/.gitignore_global
 [push]
 	default = matching
 [commit]

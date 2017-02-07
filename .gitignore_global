@@ -2,3 +2,5 @@
 .DS_Store
 .swp
 tags
+.byebug_history
+coverage/

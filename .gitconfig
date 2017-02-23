@@ -8,3 +8,5 @@
 	default = matching
 [commit]
 #	gpgsign = true
+[color]
+	ui = true

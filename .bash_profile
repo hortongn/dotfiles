@@ -22,7 +22,10 @@ export PS1="$YELLOW\$(parse_git_branch)\n$HOST_COLOR\u@\h$NO_COLOR:\W$NO_COLOR\\
 export PATH=$PATH:$HOME/.rvm/bin
 
 # For Fits
-export PATH=$PATH:~/Development/fits/fits
+export PATH=$PATH:~/fits-0.8.5
+
+# For Solr/Fedora scripts
+export PATH=$PATH:~/Development/hortongn/hydra_wrappers
 
 # Add my bin directory to path
 export PATH=$PATH:/Users/hortongn/Google_Drive/Apps/bin

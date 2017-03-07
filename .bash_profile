@@ -42,6 +42,14 @@ export EDITOR='vim'
 # Fix GPG password prompt
 export GPG_TTY=$(tty)
 
+#Aliases
+alias sufia='cd ~/Development/projecthydra/sufia'
+alias curation='cd ~/Development/projecthydra/curation_concerns'
+alias curate='cd ~/Development/uclibs/scholar/curate'
+alias scholar='cd ~/Development/uclibs/scholar/scholar_uc'
+alias scholar2='cd ~/Development/uclibs/scholar/scholar_uc2'
+alias rs='rails server -b 0.0.0.0'
+
 if [[ ! $TERM =~ screen ]]; then
   if [ -f /home/vagrant/.bash_profile ]; then
     cd ~/Development

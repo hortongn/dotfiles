@@ -43,11 +43,16 @@ export EDITOR='vim'
 export GPG_TTY=$(tty)
 
 #Aliases
-alias sufia='cd ~/Development/projecthydra/sufia'
-alias curation='cd ~/Development/projecthydra/curation_concerns'
-alias curate='cd ~/Development/uclibs/scholar/curate'
-alias scholar='cd ~/Development/uclibs/scholar/scholar_uc'
-alias scholar2='cd ~/Development/uclibs/scholar/scholar_uc2'
+#alias sufia='cd ~/Development/projecthydra/sufia'
+#alias curation='cd ~/Development/projecthydra/curation_concerns'
+#alias curate='cd ~/Development/uclibs/scholar/curate'
+#alias scholar='cd ~/Development/uclibs/scholar/scholar_uc'
+#alias scholar2='cd ~/Development/uclibs/scholar/scholar_uc2'
+export sufia=~/Development/projecthydra/sufia
+export curation=~/Development/projecthydra/curation_concerns
+export curate=~/Development/uclibs/scholar/curate
+export scholar=~/Development/uclibs/scholar/scholar_uc
+export scholar2=~/Development/uclibs/scholar/scholar_uc2
 alias rs='rails server -b 0.0.0.0'
 
 if [[ ! $TERM =~ screen ]]; then

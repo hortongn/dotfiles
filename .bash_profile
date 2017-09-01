@@ -43,9 +43,7 @@ export EDITOR='vim'
 export GPG_TTY=$(tty)
 
 # Directories
-export hyrax=~/Development/projecthydra/hyrax
-export sufia=~/Development/projecthydra/sufia
-export curation=~/Development/projecthydra/curation_concerns
+export hyrax=~/Development/samvera/hyrax
 export curate=~/Development/uclibs/scholar/curate
 export scholar=~/Development/uclibs/scholar/scholar_uc
 export scholar2=~/Development/uclibs/scholar/scholar_uc2

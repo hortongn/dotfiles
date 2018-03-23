@@ -68,3 +68,8 @@ set foldtext=MyFoldText()
 hi Folded ctermbg=NONE
 hi Folded cterm=NONE
 hi Comment ctermfg=grey
+
+" vim-gitgutter
+set updatetime=100
+autocmd BufEnter * sign define dummy
+autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')

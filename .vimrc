@@ -1,4 +1,4 @@
- colorscheme railscasts
+colorscheme railscasts
 " colorscheme solarized
 " colorscheme twilight
 syntax enable           " enable syntax processing
@@ -24,7 +24,7 @@ set ignorecase      " Ignore case in search patterns.
 set smartcase       " Override the 'ignorecase' option if the search pattern contains upper case characters.
 set ruler           " show column count in status bar
 set autoindent	    " automatically indent code
-set colorcolumn=115 " change the color of column to show long lines of code
+" set colorcolumn=115 " change the color of column to show long lines of code
 set ignorecase      " ignore case when searching
 
 set guifont=Consolas:h16
@@ -46,3 +46,25 @@ execute pathogen#infect()
 :map <space> :
 
 let g:NERDTreeWinSize=54
+
+function! MyFoldText() " {{{
+    let line = getline(v:foldstart)
+
+    let nucolwidth = &fdc + &number * &numberwidth
+    let windowwidth = winwidth(0) - nucolwidth - 3
+    let foldedlinecount = v:foldend - v:foldstart
+
+    " expand tabs into spaces
+    let onetab = strpart('          ', 0, &tabstop)
+    let line = substitute(line, '\t', onetab, 'g')
+
+    let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+    let fillcharcount = windowwidth - len(line) - 3
+    return line . "···end" . repeat(" ",fillcharcount)
+endfunction " }}}
+
+set foldtext=MyFoldText()
+
+hi Folded ctermbg=NONE
+hi Folded cterm=NONE
+hi Comment ctermfg=grey

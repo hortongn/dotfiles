@@ -73,3 +73,17 @@ hi Comment ctermfg=grey
 set updatetime=100
 autocmd BufEnter * sign define dummy
 autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+
+" vim-syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs = 1
+let g:syntastic_error_symbol = 'X'
+let g:syntastic_warning_symbol = '!'
+highlight SyntasticErrorSign ctermfg=Red ctermbg=NONE
+highlight SyntasticWarningSign ctermfg=Yellow ctermbg=NONE

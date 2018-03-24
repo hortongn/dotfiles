@@ -44,10 +44,8 @@ export GPG_TTY=$(tty)
 
 # Directories
 export hyrax=~/Development/samvera/hyrax2
-export curate=~/Development/uclibs/scholar/curate
 export scholar=~/Development/uclibs/scholar/scholar_uc
 export ucrate=~/Development/uclibs/ucrate
-export scholar2=~/Development/uclibs/scholar/scholar_uc2
 export gems=$(bundle show --paths)
 
 #Aliases

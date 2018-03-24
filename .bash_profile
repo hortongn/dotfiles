@@ -28,7 +28,7 @@ export PATH=$PATH:~/fits-0.8.5
 export PATH=$PATH:~/Development/hortongn/hydra_wrappers
 
 # Add my bin directory to path
-export PATH=$PATH:/Users/hortongn/Google_Drive/Apps/bin
+export PATH=$PATH:/Users/hortongn/Google\ Drive/Apps/bin
 
 # Git auto-completion
 source ~/.git-completion.bash

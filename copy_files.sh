@@ -10,3 +10,4 @@ cp ~/.tmux.conf .tmux.conf
 cp ~/.iterm/com.googlecode.iterm2.plist com.googlecode.iterm2.plist
 rm -rf .vim
 cp -rp ~/.vim .vim
+cp ~/tdev.sh tdev.sh

@@ -54,6 +54,6 @@ alias rs='rails server -b 0.0.0.0'
 if [[ ! $TERM =~ screen ]]; then
   if [ -f /home/vagrant/.bash_profile ]; then
     cd ~/Development
-    /usr/local/bin/tmux
+    # /usr/local/bin/tmux
   fi
 fi

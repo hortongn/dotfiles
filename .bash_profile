@@ -49,7 +49,12 @@ export ucrate=~/Development/uclibs/ucrate
 export gems=$(bundle show --paths)
 
 #Aliases
-alias rs='rails server -b 0.0.0.0'
+alias rs='sed -i 's/:inline/:sidekiq/' config/environments/development.rb; rails server -b 0.0.0.0'
+alias rc='bundle exec rails console'
+alias solrdev='bundle exec solr_wrapper -d solr/config/ --collection_name ucrate-hydra -p 8983 --persist'
+alias solrtest='bundle exec solr_wrapper -d solr/config/ --collection_name hydra-test -p 8985'
+alias fcdev='bundle exec fcrepo_wrapper -p 8984'
+alias fctest='bundle exec fcrepo_wrapper -p 8986'
 
 if [[ ! $TERM =~ screen ]]; then
   if [ -f /home/vagrant/.bash_profile ]; then

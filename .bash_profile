@@ -22,7 +22,7 @@ export PS1="$YELLOW\$(parse_git_branch)\n$HOST_COLOR\u@\h$NO_COLOR:\W$NO_COLOR\\
 export PATH=$PATH:$HOME/.rvm/bin
 
 # For Fits
-export PATH=$PATH:~/fits-0.8.5
+export PATH=$PATH:~/fits-1.0.5
 
 # For Solr/Fedora scripts
 export PATH=$PATH:~/Development/hortongn/hydra_wrappers
@@ -49,9 +49,9 @@ export ucrate=~/Development/uclibs/ucrate
 export gems=$(bundle show --paths)
 
 #Aliases
-alias rs='sed -i 's/:inline/:sidekiq/' config/environments/development.rb; rails server -b 0.0.0.0'
+alias rs='rails server -b 0.0.0.0'
 alias rc='bundle exec rails console'
-alias solrdev='bundle exec solr_wrapper -d solr/config/ --collection_name ucrate-hydra -p 8983 --persist'
+alias solrdev='bundle exec solr_wrapper -d solr/config/ --collection_name hydra-development -p 8983 --persist'
 alias solrtest='bundle exec solr_wrapper -d solr/config/ --collection_name hydra-test -p 8985'
 alias fcdev='bundle exec fcrepo_wrapper -p 8984'
 alias fctest='bundle exec fcrepo_wrapper -p 8986'

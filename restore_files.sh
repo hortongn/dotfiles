@@ -9,3 +9,5 @@ cp .git-completion.bash ~/.git-completion.bash
 cp .tmux.conf ~/.tmux.conf
 rm -rf ~/.vim
 cp -rp .vim ~/.vim
+cp tdev.sh ~/tdev.sh
+cp ttest.sh ~/ttest.sh

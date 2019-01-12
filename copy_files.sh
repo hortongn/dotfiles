@@ -11,3 +11,4 @@ cp ~/.iterm/com.googlecode.iterm2.plist com.googlecode.iterm2.plist 2>/dev/null
 rm -rf .vim
 cp -rp ~/.vim .vim
 cp ~/tdev.sh tdev.sh
+cp ~/ttest.sh ttest.sh

@@ -70,9 +70,9 @@ highlight Folded cterm=NONE
 highlight Comment ctermfg=grey
 
 " vim-gitgutter
-set updatetime=500
-autocmd BufEnter * sign define dummy
-autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+" set updatetime=500
+" autocmd BufEnter * sign define dummy
+" autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
 
 " vim-syntastic
 set statusline+=%#warningmsg#

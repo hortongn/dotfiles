@@ -85,5 +85,14 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = 'X'
 let g:syntastic_warning_symbol = '!'
+let g:syntastic_python_checkers = ['pylint', 'python']
 highlight SyntasticErrorSign ctermfg=Red ctermbg=NONE
 highlight SyntasticWarningSign ctermfg=Yellow ctermbg=NONE
+
+function! SyntasticCheckHook(errors)
+        if !empty(a:errors)
+            let g:syntastic_loc_list_height = 3
+        endif
+    endfunction
+
+    autocmd FileType python setlocal shiftwidth=4 tabstop=4

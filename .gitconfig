@@ -12,3 +12,5 @@
 #	gpgsign = true
 [color]
 	ui = true
+[pull]
+	rebase = false

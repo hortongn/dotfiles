@@ -1,5 +1,5 @@
 function parse_git_branch () {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\n\1/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 
 NO_COLOR="\[$(tput sgr0)\]\[\033[38;5;15m\]"
@@ -10,7 +10,7 @@ if [ -f /home/vagrant/.bash_profile ]; then
 fi
 
 #export PS1="$HOST_COLOR\u@\h$NO_COLOR:\W$YELLOW\$(parse_git_branch)$NO_COLOR\\$\[$(tput sgr0)\] "
-export PS1="$YELLOW\$(parse_git_branch)\n$HOST_COLOR\u@\h$NO_COLOR:\W$NO_COLOR\\$\[$(tput sgr0)\] "
+export PS1="$YELLOW\$(parse_git_branch)\n$HOST_COLOR\u@macbook$NO_COLOR:\W$NO_COLOR\\$\[$(tput sgr0)\] "
 
 # Load the default .profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
@@ -42,11 +42,13 @@ export EDITOR='vim'
 # Fix GPG password prompt
 export GPG_TTY=$(tty)
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Directories
 export hyrax=~/Development/samvera/hyrax2
 export scholar=~/Development/uclibs/scholar/scholar_uc
 export ucrate=~/Development/uclibs/ucrate
-export gems=$(bundle show --paths)
+#export gems=$(bundle show --paths)
 
 #Aliases
 alias rs='rails server -b 0.0.0.0'

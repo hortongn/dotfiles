@@ -1,7 +1,6 @@
 #!/bin/sh
 
-cp ~/.bashrc .bashrc
-cp ~/.bash_profile .bash_profile
+cp ~/.zshrc .zshrc
 cp ~/.gitconfig .gitconfig
 cp ~/.gitignore_global .gitignore_global
 cp ~/.vimrc .vimrc
@@ -10,5 +9,3 @@ cp ~/.tmux.conf .tmux.conf
 cp ~/.iterm/com.googlecode.iterm2.plist com.googlecode.iterm2.plist 2>/dev/null
 rm -rf .vim
 cp -rp ~/.vim .vim
-cp ~/tdev.sh tdev.sh
-cp ~/ttest.sh ttest.sh
